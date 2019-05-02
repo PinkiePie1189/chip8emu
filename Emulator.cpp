@@ -27,7 +27,6 @@ void Emulator::Step(short int PressedKey) {
 	short int Y = RAM[PC + 1] / 0x10;
 	short int N = RAM[PC + 1] % 0x10;
 
-	printf("%d\n", PressedKey);
 	if (Code == 0x00 && RAM[PC + 1] == 0xE0) {
 		printf_s("Clearing Screen...\n");
 		for (int y = 0; y < 32; y++) {
